@@ -14,7 +14,7 @@ class MyThread implements Runnable{
     }
     @Override
     public void run(){
-        for(int i=0;i<10;i++){
+        for(int i=0;i<30;i++){
             System.out.println("线程开始："+this.name+",i="+i);
         }
     }
