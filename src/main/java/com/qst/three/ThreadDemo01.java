@@ -11,6 +11,9 @@ public class ThreadDemo01 {
         MyThread mt1 = new MyThread("线程a");
         MyThread mt2 = new MyThread("线程b");
         MyThread mt3 = new MyThread("线程c");
+//        new Thread(mt1).run();
+//        new Thread(mt2).run();
+//        new Thread(mt3).run();
         new Thread(mt1).start();
         new Thread(mt2).start();
         new Thread(mt3).start();
