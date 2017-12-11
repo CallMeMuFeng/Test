@@ -57,10 +57,10 @@ public class My {
         list.add("A");
         list.add("BC");
         list.add("DEF");
+        String a = "hi";
         list.forEach(e -> {
-            String a = "hi";
-            a += e;
-            System.out.println(a);
+            e += a;
+            System.out.println(e);
         });
     }
 
@@ -135,6 +135,7 @@ public class My {
         String s5 = new String("asd");
         System.out.println(s1 == s2);
         System.out.println(s3 == s1);
+        System.out.println(s4 == s5);
         System.out.println(s3.intern() == s1.intern());
         System.out.println(s4.intern() == s5.intern());
     }
@@ -335,4 +336,39 @@ public class My {
         }
     }
 
+    @Test
+    public void test19() {
+        List<String> list = new ArrayList<>(10000000);
+        for (int i = 0; i < 10000000; i++) {
+            list.add(new String("a"));
+        }
+        long l1 = System.currentTimeMillis();
+        list.forEach(e -> {
+
+        });
+        long l2 = System.currentTimeMillis();
+        System.out.println(l2 - l1);
+        long l3 = System.currentTimeMillis();
+        for (String s : list) {
+
+        }
+        long l4 = System.currentTimeMillis();
+        System.out.println(l4 - l3);
+    }
+
+    @Test
+    public void test20() {
+        String a = "asd";
+        a += "qwe";
+        System.out.println(a);
+    }
+
+    @Test
+    public void test21() {
+        String a = "asd";
+        for (int i = 0; i < 1; i++) {
+            a += "qwe";
+        }
+        System.out.println(a);
+    }
 }
