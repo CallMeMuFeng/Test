@@ -7,7 +7,7 @@ package com.qst.three;
 public class JavaVMStackSOF {
     private int stackLength = 1;
 
-    public void stackLength() {
+    private void stackLength() {
         stackLength++;
         stackLength();
     }
@@ -20,5 +20,10 @@ public class JavaVMStackSOF {
             System.out.println("stack length:" + oom.stackLength);
             throw e;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "JavaVMStackSOF{}";
     }
 }

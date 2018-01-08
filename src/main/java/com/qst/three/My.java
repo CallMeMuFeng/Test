@@ -371,4 +371,45 @@ public class My {
         }
         System.out.println(a);
     }
+
+    @Test
+    public void test22() {
+        InitClass initClass = new InitClass();
+        System.out.println(initClass.toString());
+        System.out.println(0 == initClass.getJ());
+    }
+
+    @Test
+    public void test23() {
+        String[] s = {"asd", "qwe", "zxc"};
+        int a = s.length;
+        if (s[(a - 3) & 123] != null) {
+            System.out.println("qwe");
+        }
+    }
+
+    @Test
+    public void test24() {
+        List<Employee> employeeMap = new ArrayList<>();
+        employeeMap.add(new Employee());
+        employeeMap.add(new Employee());
+        employeeMap.add(new Employee());
+        System.out.println(employeeMap);
+    }
+
+    @Test
+    public void test25() {
+        int a = 0;
+        int b = 0;
+        if ((b = a + 1) > 0) {
+            System.out.println("qwe");
+        }
+        System.out.println(b);
+    }
+
+    @Test
+    public void test26(){
+        String a = new String("a");
+        System.out.println(a.hashCode());
+    }
 }
