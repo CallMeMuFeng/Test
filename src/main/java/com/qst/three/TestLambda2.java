@@ -27,7 +27,7 @@ import java.util.function.Consumer;
  * return Integer.compare(o1, o2);
  * };
  * <p>
- * 语法格式五：若Lambda体重只有一条语句，return和大括号都可以省略不写
+ * 语法格式五：若Lambda体中只有一条语句，return和大括号都可以省略不写
  * Comparator<Integer> com = (o1, o2) -> Integer.compare(o1, o2);
  * <p>
  * 语法格式六：Lambda表达式的参数列表的数据类型可以省略不写，因为JVM编译器可以通过上下文推断出类型，即“类型推断”
